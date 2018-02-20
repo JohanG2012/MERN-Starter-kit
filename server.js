@@ -3,6 +3,8 @@ const express = require('express');
 const bunyanConfig = require('./configs/bunyan');
 const compression = require('compression');
 const multer = require('multer');
+const bunyan = require('bunyan');
+const memwatch = require('memwatch-next');
 
 // Set port, init express
 const port = process.env.PORT || 8080;
