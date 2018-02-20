@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'integrering',
+  name: process.env.APP_NAME,
   streams: [
     {
       level: 'debug',
