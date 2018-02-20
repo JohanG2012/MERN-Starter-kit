@@ -5,6 +5,8 @@ const compression = require('compression');
 const multer = require('multer');
 const bunyan = require('bunyan');
 const memwatch = require('memwatch-next');
+const bodyParser = require('body-parser');
+const exphbs = require('express-handlebars');
 
 // Set port, init express
 const port = process.env.PORT || 8080;
