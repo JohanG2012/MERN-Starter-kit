@@ -10,7 +10,7 @@ const app = express();
 // Init bunyan logger
 const log = bunyan.createLogger(bunyanConfig);
 
-// Watch for memory leaks, log leaks
+// Watch for memory leaks, log leaks as fatal
 memwatch.on('leak', info => {
   log.fatal('Memory leak detected:', info);
 });
