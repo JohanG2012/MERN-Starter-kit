@@ -4,17 +4,14 @@
   "description": "A ExpressJS boilerplate using ES7 syntax",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "nodemon --ignore 'logs' server.js -L | ./node_modules/.bin/bunyan"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JohanG2012/express-es7-boilerplate.git"
   },
-  "keywords": [
-    "es7",
-    "expressjs",
-    "boilerplate"
-  ],
+  "keywords": ["es7", "expressjs", "boilerplate"],
   "author": "JohanG2012",
   "license": "MIT",
   "bugs": {
