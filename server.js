@@ -8,7 +8,7 @@ const app = express();
 const log = bunyan.createLogger(bunyanConfig);
 
 memwatch.on('leak', info => {
-  log.fatal('Memory leak detected:\n', info);
+  log.fatal('Memory leak detected:', info);
 });
 
 app.use(bodyParser.json());
