@@ -22,8 +22,10 @@
   },
   "homepage": "https://github.com/JohanG2012/express-es7-boilerplate#readme",
   "dependencies": {
+    "bunyan": "^1.8.12",
     "dotenv": "^5.0.0",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "memwatch-next": "^0.3.0"
   },
   "devDependencies": {
     "docdash": "^0.4.0",
