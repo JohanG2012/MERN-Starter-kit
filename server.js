@@ -27,4 +27,5 @@ const uploads = multer({ dest: 'uploads/' });
 app.use(compression());
 
 // Start application
-log.info('Application started');
+app.listen(port);
+log.info(`Application started, listen on port: ${port}`);
