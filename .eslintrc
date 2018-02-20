@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier"
+    ],
+  "plugins": [
+    "prettier"
+  ],
+  "rules": {
+        "jsx-a11y/anchor-is-valid": [ "error", {
+            "components": []
+          }],
+        "prettier/prettier": "error",
+        "require-jsdoc": ["error", {
+            "require": {
+                "FunctionDeclaration": true,
+                "MethodDefinition": true,
+                "ClassDeclaration": true,
+                "ArrowFunctionExpression": true,
+                "FunctionExpression": true
+            }
+        }]
+    },
+  "env":{
+    "browser": true,
+    "node": true,
+    "jest": true,
+    },
+    "parser": "babel-eslint"
+}
