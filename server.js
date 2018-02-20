@@ -26,6 +26,10 @@ const uploads = multer({ dest: 'uploads/' });
 // Compress responses
 app.use(compression());
 
+// Use handlebars as template engine, default layout: main
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
+
 // Start application
 app.listen(port);
 log.info(`Application started, listen on port: ${port}`);
