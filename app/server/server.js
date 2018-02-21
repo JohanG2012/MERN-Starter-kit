@@ -6,7 +6,6 @@ const multer = require('multer');
 const bunyan = require('bunyan');
 const memwatch = require('memwatch-next');
 const bodyParser = require('body-parser');
-const exphbs = require('express-handlebars');
 
 // Set port, init express
 const port = process.env.PORT || 8080;
@@ -25,14 +24,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Handles file uploads
-const uploads = multer({ dest: 'uploads/' });
+const uploads = multer({ dest: 'uploads/' }); // eslint-disable-line no-unused-vars
 
 // Compress responses
 app.use(compression());
-
-// Use handlebars as template engine, default layout: main
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-app.set('view engine', 'handlebars');
 
 // Start application
 app.listen(port);
