@@ -1,5 +1,5 @@
 node_modules/
 .env
-logs/*.json
+app/server/logs/*.json
 *.log
 .vagrant/
