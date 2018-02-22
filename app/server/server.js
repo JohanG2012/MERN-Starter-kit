@@ -7,6 +7,7 @@ const bunyan = require('bunyan');
 const memwatch = require('memwatch-next');
 const bodyParser = require('body-parser');
 const routes = require('./routes/index');
+const mongoose = require('mongoose');
 
 // Set port, init express
 const port = process.env.PORT || 8080;
@@ -14,6 +15,13 @@ const app = express();
 
 // Init bunyan logger
 const log = bunyan.createLogger(bunyanConfig);
+
+// Mongoose connection
+mongoose.connect(process.env.MONGODB_URI);
+
+mongoose.Promise = global.Promise;
+
+const db = mongoose.connection;
 
 // Watch for memory leaks, log leaks as fatal
 memwatch.on('leak', info => {
