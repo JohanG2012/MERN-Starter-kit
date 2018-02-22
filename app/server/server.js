@@ -6,6 +6,7 @@ const multer = require('multer');
 const bunyan = require('bunyan');
 const memwatch = require('memwatch-next');
 const bodyParser = require('body-parser');
+const routes = require('./routes/index');
 
 // Set port, init express
 const port = process.env.PORT || 8080;
@@ -28,6 +29,9 @@ const uploads = multer({ dest: 'uploads/' }); // eslint-disable-line no-unused-v
 
 // Compress responses
 app.use(compression());
+
+// Add routes
+app.use('/', routes);
 
 // Start application
 app.listen(port);
