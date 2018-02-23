@@ -3,7 +3,6 @@ sudo npm install -g n
 sudo n latest
 sudo apt-get purge nodejs -y
 sudo npm install -g nodemon
-cd /vagrant/app
+cd /vagrant
 npm install
-cd server
-nodemon --ignore 'logs' server.js -L | ../node_modules/.bin/bunyan
+nodemon --ignore './app/server/logs' ./app/server/server.js -L | node_modules/.bin/bunyan

@@ -7,7 +7,7 @@ module.exports = {
     },
     {
       level: 'info',
-      path: `${process.env.APP_ROOT}/logs/app.json` // log ERROR and above to a file
+      path: `${process.env.SERVER_ROOT}/logs/app.json` // log ERROR and above to a file
     }
   ]
 };

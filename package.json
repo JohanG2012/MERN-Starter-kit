@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/JohanG2012/express-es7-boilerplate.git"
   },
-  "keywords": ["es7", "expressjs", "boilerplate"],
+  "keywords": [
+    "es7",
+    "expressjs",
+    "boilerplate"
+  ],
   "author": "JohanG2012",
   "license": "MIT",
   "bugs": {
