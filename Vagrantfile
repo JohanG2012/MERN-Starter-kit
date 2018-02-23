@@ -14,8 +14,8 @@ Vagrant.configure("2") do |config|
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/xenial64"
   config.vm.provision "shell", path: "scripts/init.sh"
-  config.vm.provision "shell", path: "scripts/node.sh"
   config.vm.provision "shell", path: "scripts/mongodb.sh"
+  config.vm.provision "shell", path: "scripts/node.sh"
   config.vm.network "forwarded_port", guest: 8080, host: 8088
 
   # Disable automatic box update checking. If you disable this, then
