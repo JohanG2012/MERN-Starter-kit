@@ -6,8 +6,11 @@ const multer = require('multer');
 const bunyan = require('bunyan');
 const memwatch = require('memwatch-next');
 const bodyParser = require('body-parser');
-const routes = require('./routes/index');
-const mongoose = require('mongoose');
+const routes = require('./routes');
+const passport = require('passport');
+const localSignupStrategy = require('./passport/local-signup');
+const localLoginStrategy = require('./passport/local-login');
+const db = require('./models');
 
 // Set port, init express
 const port = process.env.PORT || 8080;
@@ -16,12 +19,16 @@ const app = express();
 // Init bunyan logger
 const log = bunyan.createLogger(bunyanConfig);
 
-// Mongoose connection
-mongoose.connect(process.env.MONGODB_URI);
+const errorHandler = error => {
+  log.error(error);
+};
 
-mongoose.Promise = global.Promise;
+db.connect(process.env.MONGODB_URI, errorHandler);
 
-const db = mongoose.connection;
+// Init passport
+app.use(passport.initialize());
+passport.use('local-signup', localSignupStrategy);
+passport.use('local-login', localLoginStrategy);
 
 // Watch for memory leaks, log leaks as fatal
 memwatch.on('leak', info => {
