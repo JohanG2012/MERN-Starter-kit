@@ -1,3 +1,7 @@
+# Get Started
+
+1. Start server environment `vagrant up`
+
 # Packages
 
 ## Client
