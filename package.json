@@ -4,17 +4,16 @@
   "description": "A ExpressJS boilerplate using ES7 syntax",
   "main": "server.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline --open"
+    "start": "webpack-dev-server --hot --inline --open",
+    "startDev":
+      "webpack-dev-server --define process.env.HOST='\"DEVELOPMENT\"' --hot --inline --open",
+    "bundle": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JohanG2012/express-es7-boilerplate.git"
   },
-  "keywords": [
-    "es7",
-    "expressjs",
-    "boilerplate"
-  ],
+  "keywords": ["es7", "expressjs", "boilerplate"],
   "author": "JohanG2012",
   "license": "MIT",
   "bugs": {
@@ -22,7 +21,6 @@
   },
   "homepage": "https://github.com/JohanG2012/express-es7-boilerplate#readme",
   "dependencies": {
-    "antd": "^3.2.1",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
     "bunyan": "^1.8.12",
@@ -39,6 +37,7 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
+    "prop-types": "^15.6.0",
     "raf": "^3.4.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
