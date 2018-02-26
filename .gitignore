@@ -3,3 +3,4 @@ node_modules/
 app/server/logs/*.json
 *.log
 .vagrant/
+todo.md
