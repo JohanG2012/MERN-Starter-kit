@@ -1,0 +1,7 @@
+const SHOW_FLASH = 'SHOW_FLASH';
+const COLLAPSE_SIDEBAR = 'COLLAPSE_SIDEBAR';
+
+export default {
+  SHOW_FLASH,
+  COLLAPSE_SIDEBAR
+};
