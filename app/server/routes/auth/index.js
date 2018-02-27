@@ -5,23 +5,23 @@ const passport = require('passport');
 const router = new express.Router();
 
 function validateSignupForm(payload) {
-  const errors = {};
+  const errors = [];
   let isFormValid = true;
   let message = '';
 
   if (!payload || typeof payload.email !== 'string' || !validator.isEmail(payload.email)) {
     isFormValid = false;
-    errors.email = 'Please provide a correct email address.';
+    errors.push('Please provide a correct email address.');
   }
 
   if (!payload || typeof payload.password !== 'string' || payload.password.trim().length < 8) {
     isFormValid = false;
-    errors.password = 'Password must have at least 8 characters.';
+    errors.push('Password must have at least 8 characters.');
   }
 
   if (!payload || typeof payload.name !== 'string' || payload.name.trim().length === 0) {
     isFormValid = false;
-    errors.name = 'Please provide your name.';
+    errors.push('Please provide your name.');
   }
 
   if (!isFormValid) {
@@ -43,18 +43,18 @@ function validateSignupForm(payload) {
  *                   errors tips, and a global message for the whole form.
  */
 function validateLoginForm(payload) {
-  const errors = {};
+  const errors = [];
   let isFormValid = true;
   let message = '';
 
   if (!payload || typeof payload.email !== 'string' || payload.email.trim().length === 0) {
     isFormValid = false;
-    errors.email = 'Please provide your email address.';
+    errors.push('Please provide your email address.');
   }
 
   if (!payload || typeof payload.password !== 'string' || payload.password.trim().length === 0) {
     isFormValid = false;
-    errors.password = 'Please provide your password.';
+    errors.push('Please provide your password.');
   }
 
   if (!isFormValid) {
@@ -84,15 +84,13 @@ router.post('/signup', (req, res, next) => {
         return res.status(409).json({
           success: false,
           message: 'Check the form for errors.',
-          errors: {
-            email: 'This email is already taken.'
-          }
+          errors: ['This email is already taken.']
         });
       }
 
       return res.status(400).json({
         success: false,
-        message: 'Could not process the form.'
+        errors: ['Could not process the form.']
       });
     }
 
@@ -115,11 +113,10 @@ router.post('/login', (req, res, next) => {
 
   return passport.authenticate('local-login', (err, token, userData) => {
     if (err) {
-      console.log(err);
       if (err.name === 'IncorrectCredentialsError') {
         return res.status(400).json({
           success: false,
-          message: err.message
+          errors: [err.message]
         });
       }
 
