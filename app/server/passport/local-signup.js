@@ -6,7 +6,9 @@ const register = (req, email, password, done) => {
   const userData = {
     email: email.trim(),
     password: password.trim(),
-    name: req.body.name.trim()
+    profile: {
+      name: req.body.name.trim()
+    }
   };
 
   const user = new User(userData);
