@@ -34,7 +34,8 @@ const authenticate = (req, email, password, done) => {
       }
 
       const payload = {
-        sub: user._id // eslint-disable-line no-underscore-dangle
+        sub: user._id, // eslint-disable-line no-underscore-dangle
+        username: user.profile.name
       };
 
       const token = jwt.sign(payload, process.env.jwtSecret);
