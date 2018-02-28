@@ -8,6 +8,10 @@ A boilerplate for MERN applications to quickly get you started. Including Redux,
 
 2. Start webpack dev server `npm start`
 
+![register](https://raw.githubusercontent.com/JohanG2012/MERN-Starter-kit/master/__docs__/howToGifs/register.gif)
+
+![dashboard](https://raw.githubusercontent.com/JohanG2012/MERN-Starter-kit/master/__docs__/howToGifs/dashboard.gif)
+
 # Packages
 
 ## Client
