@@ -1,6 +1,6 @@
 import React from 'react';
 import ResetForm from '../components/ResetForm';
-import Center from '../components/commons/Center';
+import Center from '../commons/Center';
 import BasePage from './BasePage';
 
 /**

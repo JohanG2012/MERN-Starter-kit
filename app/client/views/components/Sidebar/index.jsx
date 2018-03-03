@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import MenuItem from '../commons/MenuItem';
+import MenuItem from '../../commons/MenuItem';
 import SubMenu from '../SubMenu';
-import Brand from '../commons/Brand';
+import Brand from '../../commons/Brand';
 import Icon from '../Icon';
 import Menu from '../Menu';
 import CollapseButton from './CollapseButton';

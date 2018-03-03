@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import MenuItem from '../commons/MenuItem';
+import MenuItem from '../../commons/MenuItem';
 import Icon from '../Icon';
 import MainMenuItem from './MainMenuItem';
 import Title from './Title';

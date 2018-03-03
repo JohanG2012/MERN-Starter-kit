@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Layout from '../components/commons/Layout';
+import Layout from '../commons/Layout';
 import Main from '../elements/Main';
 import Footer from '../elements/Footer';
 import SidebarContainer from '../containers/SidebarContainer';

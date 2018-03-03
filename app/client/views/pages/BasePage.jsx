@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../elements/Header';
-import Brand from '../components/commons/Brand';
+import Brand from '../commons/Brand';
 import Footer from '../elements/Footer';
-import Layout from '../components/commons/Layout';
+import Layout from '../commons/Layout';
 import Main from '../elements/Main';
 import FlashMessage from '../components/FlashMessage';
 

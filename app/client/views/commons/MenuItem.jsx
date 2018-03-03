@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../../constants/colors';
+import colors from '../constants/colors';
 
 const MenuItem = styled.li`
   padding-left: ${props => (props.mode === 'inline' ? '25px' : props.collapsed ? '0' : '48px')};
