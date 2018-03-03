@@ -12,9 +12,9 @@ const Router = routerMiddleware(history);
 
 const composeEnhancers = composeWithDevTools({});
 const rootReducer = combineReducers({
-  registerReducer,
-  sessionReducer,
-  layoutReducer,
+  register: registerReducer,
+  session: sessionReducer,
+  layout: layoutReducer,
   router
 });
 

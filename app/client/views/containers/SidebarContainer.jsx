@@ -9,7 +9,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  sidebarIsCollapsed: state.layoutReducer.collapseSidebar
+  sidebarIsCollapsed: state.layout.collapseSidebar
 });
 /* eslint-enable require-jsdoc */
 

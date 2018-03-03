@@ -12,8 +12,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  isLoggedIn: state.sessionReducer.loggedInAs.isLoggedIn,
-  errors: state.sessionReducer.loginHasError.errorMessages
+  isLoggedIn: state.session.loggedInAs.isLoggedIn,
+  errors: state.session.loginHasError.errorMessages
 });
 /* eslint-enable require-jsdoc */
 

@@ -12,9 +12,9 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  loggedInAs: state.sessionReducer.loggedInAs,
-  errors: state.registerReducer.registerHasError.errorMessages,
-  success: state.registerReducer.registerPostDataSuccess
+  loggedInAs: state.session.loggedInAs,
+  errors: state.register.registerHasError.errorMessages,
+  success: state.register.registerPostDataSuccess
 });
 /* eslint-enable require-jsdoc */
 

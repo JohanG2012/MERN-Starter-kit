@@ -4,7 +4,7 @@ import FlashMessage from '../components/FlashMessage';
 /* eslint-disable require-jsdoc */
 
 const mapStateToProps = state => ({
-  message: state.layoutReducer.loggedInAs
+  message: state.layout.loggedInAs
 });
 /* eslint-enable require-jsdoc */
 
