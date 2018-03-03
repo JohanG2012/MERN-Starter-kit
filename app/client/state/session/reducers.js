@@ -28,11 +28,12 @@ const loginHasError = (state = {}, action) => {
 const loggedInAs = (state = { isLoggedIn: false, jwt: '' }, action) => {
   switch (action.type) {
     case types.LOGEDIN_AS:
-      return Object.assign({}, state, {
+      return {
+        ...state,
         isLoggedIn: action.isLoggedIn,
         username: action.username,
         jwt: action.jwt
-      });
+      };
 
     default:
       return state;

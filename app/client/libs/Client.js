@@ -38,7 +38,7 @@ class Client {
 
     const response = await fetch(uri, options);
     const json = await response.json();
-    const result = Object.assign({ status: response.status, message: response.message }, json);
+    const result = { status: response.status, message: response.message, ...json };
     return result;
   }
 
@@ -85,7 +85,7 @@ class Client {
 
     const response = await fetch(uri, options);
     const json = await response.json();
-    const result = Object.assign({ status: response.status, message: response.message }, json);
+    const result = { status: response.status, message: response.message, ...json };
     return result;
   }
 }

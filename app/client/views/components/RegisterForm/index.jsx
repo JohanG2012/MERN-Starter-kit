@@ -22,7 +22,7 @@ class RegisterForm extends Component {
   state = { fields: { name: '', password: '', email: '' }, errorMessages: [] };
 
   handleChange = event => {
-    const fields = Object.assign(this.state.fields, { [event.target.name]: event.target.value });
+    const fields = { ...this.state.fields, [event.target.name]: event.target.value };
     this.setState({ fields });
   };
 

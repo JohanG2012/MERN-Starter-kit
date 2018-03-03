@@ -29,7 +29,7 @@ class LoginForm extends Component {
   };
 
   handleChange = event => {
-    const fields = Object.assign(this.state.fields, { [event.target.name]: event.target.value });
+    const fields = { ...this.state.fields, [event.target.name]: event.target.value };
     this.setState({ fields });
   };
 
